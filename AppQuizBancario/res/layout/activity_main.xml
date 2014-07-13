@@ -1,0 +1,29 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context="com.giovanni.testapp.MainActivity"
+    tools:ignore="MergeRootFrame" 
+    android:background="#FFF0B0">
+    
+	<Button
+	    android:id="@+id/button_start_quiz"
+	    android:layout_width="160dp"
+	    android:layout_height="wrap_content"
+	    android:background="#006080"
+	    android:text="@string/startQuiz"
+	    android:textColor="#FFFFFF" />
+	
+	<Button
+	    android:id="@+id/button_start_statistiche"
+	    android:layout_width="160dp"
+	    android:layout_height="wrap_content"
+	    android:layout_marginTop="20dp"
+	    android:text="@string/statisticheQuiz"
+	    android:background="#006080"
+	    android:textColor="#FFFFFF"/>
+
+</LinearLayout>

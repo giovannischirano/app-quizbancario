@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">AppQuizBancario</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_risultato">RisultatoActivity</string>
+    <string name="title_activity_quiz">QuizActivity</string>
+    <string name="nessuna_risposta_title">Nessuna risposta!</string>
+    <string name="nessuna_risposta_message">Stai procedendo senza aver selezionato alcuna risposta!</string>
+    <string name="startQuiz">Inizia Quiz</string>
+    <string name="statisticheQuiz">Statistiche Quiz</string>
+    <string name="risultatoMessage">Il tuo livello di Bancario di merda è:</string>
+    <string name="prossima_domanda">Avanti</string>
+
+</resources>

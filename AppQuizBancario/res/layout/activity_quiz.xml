@@ -1,0 +1,78 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.giovanni.testapp.QuizActivity"
+    tools:ignore="MergeRootFrame" 
+    android:background="#FFF0B0">
+
+    <TextView
+        android:id="@+id/stato_quiz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:textSize="18sp" />
+
+    <RelativeLayout
+        android:id="@+id/quiz_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:padding="5dp" >
+
+        <TextView
+            android:id="@+id/domanda"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="21sp" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/domanda" >
+
+            <RadioButton
+                android:id="@+id/radio_question_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:checked="false"
+                android:onClick="onRadioButtonClicked"
+                android:textSize="19sp" />
+
+            <RadioButton
+                android:id="@+id/radio_question_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:checked="false"
+                android:onClick="onRadioButtonClicked"
+                android:textSize="19sp" />
+
+            <RadioButton
+                android:id="@+id/radio_question_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:checked="false"
+                android:onClick="onRadioButtonClicked"
+                android:textSize="19sp" />
+
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/button_next_question"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/radioGroup"
+            android:layout_marginTop="10dp"
+            android:text="@string/prossima_domanda" />
+
+    </RelativeLayout>
+
+</LinearLayout>
