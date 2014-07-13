@@ -8,22 +8,31 @@ import android.database.Cursor;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListAdapter;
+import android.widget.ListView;
 
 import com.example.testapp.R;
-import com.giovanni.test.app.utils.QuizStructure;
+import com.giovanni.testapp.utils.QuizStructure;
 
-public class StatisticheActivity extends ListActivity {
+public class StatisticheActivity extends Activity {
 
 	private QuizStructure dbHelper; 
     private Cursor cursor;
     private ArrayList<String> listPunteggi = new ArrayList<String>();
+	private Button pulisciStoria;
+    private ListView listView;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_statistiche);
+		
+		listView = (ListView) findViewById(R.id.listView);
+		pulisciStoria = (Button) findViewById(R.id.button_pulisci_statistiche);
 		
 		dbHelper = new QuizStructure(this);
         dbHelper.open();
@@ -35,11 +44,21 @@ public class StatisticheActivity extends ListActivity {
 	        	listPunteggi.add(cursor.getString(cursor.getColumnIndex(QuizStructure.COLUMN_NAME_PUNTEGGIO)));
 	        }
 		}
-        dbHelper.close();
-        cursor.close();
+
+        ListAdapter adapter = new ArrayAdapter<String>(getApplicationContext(), R.layout.layout_adapter_list, listPunteggi);
+        listView.setAdapter(adapter);
         
-        ListAdapter adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, listPunteggi);
-        setListAdapter(adapter);
+        pulisciStoria.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				dbHelper.clearDbPunteggio();
+				listPunteggi = new ArrayList<String>();
+				listView.setAdapter(null);
+			}
+		});
+        
+        cursor.close();
 	}
 
 	@Override

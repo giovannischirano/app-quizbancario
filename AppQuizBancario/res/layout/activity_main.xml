@@ -3,27 +3,44 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
+    android:background="#FFF0B0"
     android:orientation="vertical"
     tools:context="com.giovanni.testapp.MainActivity"
-    tools:ignore="MergeRootFrame" 
-    android:background="#FFF0B0">
+    tools:ignore="MergeRootFrame" >
     
-	<Button
-	    android:id="@+id/button_start_quiz"
-	    android:layout_width="160dp"
-	    android:layout_height="wrap_content"
-	    android:background="#006080"
-	    android:text="@string/startQuiz"
-	    android:textColor="#FFFFFF" />
-	
-	<Button
-	    android:id="@+id/button_start_statistiche"
-	    android:layout_width="160dp"
-	    android:layout_height="wrap_content"
-	    android:layout_marginTop="20dp"
-	    android:text="@string/statisticheQuiz"
-	    android:background="#006080"
-	    android:textColor="#FFFFFF"/>
+    <TextView
+        android:id="@+id/title_main_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="75dp"
+        android:text="@string/bancarioQuestion"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+    
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/button_start_quiz"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_app"
+            android:text="@string/startQuiz"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/button_start_statistiche"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button_app"
+            android:text="@string/statisticheQuiz"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
 
 </LinearLayout>

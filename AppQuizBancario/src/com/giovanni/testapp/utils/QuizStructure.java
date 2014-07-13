@@ -1,4 +1,4 @@
-package com.giovanni.test.app.utils;
+package com.giovanni.testapp.utils;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -88,8 +88,12 @@ public class QuizStructure{
 				COLUMN_NAME_STATISTICA_ID, COLUMN_NAME_PUNTEGGIO}, null, null, null, null, null);
 	}
 	
-	public void clearDb() {
+	public void clearDbDomande() {
 		database.execSQL("delete from " + TABLE_NAME_DOMANDE);
+	}
+	
+	public void clearDbPunteggio() {
+		database.execSQL("delete from " + TABLE_NAME_STATISTICHE_UTENTE);
 	}
 	
 	public void buildDb(InputStream is){

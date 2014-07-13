@@ -1,4 +1,4 @@
-package com.giovanni.test.app.utils;
+package com.giovanni.testapp.utils;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;

@@ -23,7 +23,7 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import com.example.testapp.R;
-import com.giovanni.test.app.utils.QuizStructure;
+import com.giovanni.testapp.utils.QuizStructure;
 
 public class QuizActivity extends Activity {
 
@@ -64,7 +64,7 @@ public class QuizActivity extends Activity {
 		
 		dbHelper = new QuizStructure(this);
         dbHelper.open();
-        dbHelper.clearDb();
+        dbHelper.clearDbDomande();
         
         AssetManager am = getApplicationContext().getAssets();
         InputStream is = null;
