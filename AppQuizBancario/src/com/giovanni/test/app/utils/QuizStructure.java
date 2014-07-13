@@ -74,12 +74,18 @@ public class QuizStructure{
 		return database.insertOrThrow(TABLE_NAME_STATISTICHE_UTENTE, null, initialValues);
 	}
 	
-	// fetch di tutte le domande
+	//fetch di tutte le domande
 	public Cursor fetchAllDomande() {
 		return database.query(TABLE_NAME_DOMANDE, new String[] { COLUMN_NAME_ENTRY_ID, 
 				COLUMN_NAME_DOMANDA, COLUMN_NAME_RISPOSTA_1, COLUMN_NAME_RISPOSTA_2, 
 				COLUMN_NAME_RISPOSTA_3 }, null, null,
 				null, null, null);
+	}
+	
+	//fetch di tutte i punteggi conseguiti dall'utente
+	public Cursor fetchAllPunteggi() {
+		return database.query(TABLE_NAME_STATISTICHE_UTENTE, new String[] {
+				COLUMN_NAME_STATISTICA_ID, COLUMN_NAME_PUNTEGGIO}, null, null, null, null, null);
 	}
 	
 	public void clearDb() {

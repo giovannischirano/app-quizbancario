@@ -12,5 +12,6 @@
     <string name="statisticheQuiz">Statistiche Quiz</string>
     <string name="risultatoMessage">Il tuo livello di Bancario di merda è:</string>
     <string name="prossima_domanda">Avanti</string>
+    <string name="title_activity_statistiche">StatisticheActivity</string>
 
 </resources>

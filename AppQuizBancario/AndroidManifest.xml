@@ -30,6 +30,10 @@
             android:name="com.giovanni.testapp.QuizActivity"
             android:label="@string/title_activity_quiz" >
         </activity>
+        <activity
+            android:name="com.giovanni.testapp.StatisticheActivity"
+            android:label="@string/title_activity_statistiche" >
+        </activity>
     </application>
 
 </manifest>

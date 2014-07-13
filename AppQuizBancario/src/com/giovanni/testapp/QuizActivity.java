@@ -43,7 +43,7 @@ public class QuizActivity extends Activity {
     private String risposta_3 = "";
     
     private int numeroDomanda = 1;
-    private double risultato;
+    private double risultato = 0;
     private int numDomande;
     private boolean risRispostaFull = false;
     private boolean risRispostaHalf = false;

@@ -20,6 +20,7 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main);
 
 		Button startQuiz = (Button) findViewById(R.id.button_start_quiz);
+		Button statisticheQuiz = (Button) findViewById(R.id.button_start_statistiche);
 		
 		startQuiz.setOnClickListener(new OnClickListener() {
 			
@@ -27,6 +28,15 @@ public class MainActivity extends Activity {
 			public void onClick(View v) {
 				Intent intentStartQuiz = new Intent(MainActivity.this, QuizActivity.class);
 				startActivity(intentStartQuiz);
+			}
+		});
+		
+		statisticheQuiz.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Intent intentStartQuiz = new Intent(MainActivity.this, StatisticheActivity.class);
+				startActivity(intentStartQuiz);				
 			}
 		});
 	}
