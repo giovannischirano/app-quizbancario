@@ -1,30 +1,32 @@
 package com.giovanni.testapp;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 import android.app.Activity;
-import android.app.ListActivity;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.ListAdapter;
 import android.widget.ListView;
 
 import com.example.testapp.R;
 import com.giovanni.testapp.utils.QuizStructure;
+import com.giovanni.testapp.utils.StatisticItem;
+import com.giovanni.testapp.utils.StatisticsViewAdapter;
 
 public class StatisticheActivity extends Activity {
 
 	private QuizStructure dbHelper; 
     private Cursor cursor;
-    private ArrayList<String> listPunteggi = new ArrayList<String>();
 	private Button pulisciStoria;
     private ListView listView;
+    private StatisticsViewAdapter adapter;
+    private List<StatisticItem> statisticItems = new ArrayList<StatisticItem>();
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -41,11 +43,16 @@ public class StatisticheActivity extends Activity {
         if(cursor!=null && cursor.getCount()>0)
         {
         	while(cursor.moveToNext()){
-	        	listPunteggi.add(cursor.getString(cursor.getColumnIndex(QuizStructure.COLUMN_NAME_PUNTEGGIO)));
+        		String punteggio = cursor.getString(cursor.getColumnIndex(QuizStructure.COLUMN_NAME_PUNTEGGIO));
+        		String dataPunteggio = cursor.getString(cursor.getColumnIndex(QuizStructure.COLUMN_NAME_PUNTEGGIO_DATA)).substring(0, 10);
+        		
+        		StatisticItem item = new StatisticItem(punteggio, dataPunteggio, "");
+        		statisticItems.add(item);
 	        }
+        	Collections.reverse(statisticItems);
 		}
 
-        ListAdapter adapter = new ArrayAdapter<String>(getApplicationContext(), R.layout.layout_adapter_list, listPunteggi);
+        adapter = new StatisticsViewAdapter(getApplicationContext(), R.layout.list_statistiche_layout, statisticItems);
         listView.setAdapter(adapter);
         
         pulisciStoria.setOnClickListener(new OnClickListener() {
@@ -53,7 +60,7 @@ public class StatisticheActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				dbHelper.clearDbPunteggio();
-				listPunteggi = new ArrayList<String>();
+				statisticItems = new ArrayList<StatisticItem>();
 				listView.setAdapter(null);
 			}
 		});

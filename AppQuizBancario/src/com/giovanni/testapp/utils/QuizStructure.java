@@ -33,6 +33,7 @@ public class QuizStructure{
 	public static final String TABLE_NAME_STATISTICHE_UTENTE = "statisticheTable";
 	public static final String COLUMN_NAME_STATISTICA_ID = "_id";
 	public static final String COLUMN_NAME_PUNTEGGIO = "punteggio";
+	public static final String COLUMN_NAME_PUNTEGGIO_DATA = "dataPunteggio";
     
 	public QuizStructure open() throws SQLException {
 		dbHelper = new QuizDbHelper(context);
@@ -85,7 +86,7 @@ public class QuizStructure{
 	//fetch di tutte i punteggi conseguiti dall'utente
 	public Cursor fetchAllPunteggi() {
 		return database.query(TABLE_NAME_STATISTICHE_UTENTE, new String[] {
-				COLUMN_NAME_STATISTICA_ID, COLUMN_NAME_PUNTEGGIO}, null, null, null, null, null);
+				COLUMN_NAME_STATISTICA_ID, COLUMN_NAME_PUNTEGGIO, COLUMN_NAME_PUNTEGGIO_DATA}, null, null, null, null, null);
 	}
 	
 	public void clearDbDomande() {

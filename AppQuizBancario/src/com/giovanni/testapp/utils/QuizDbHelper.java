@@ -10,6 +10,7 @@ public class QuizDbHelper extends SQLiteOpenHelper {
     public static final String DATABASE_NAME = "Quiz.db";
 	
     private static final String TEXT_TYPE = " TEXT";
+    private static final String DATA_TYPE = " DATETIME DEFAULT CURRENT_TIMESTAMP";
     private static final String COMMA_SEP = ",";
     
     private static final String SQL_CREATE_TABLE_DOMANDE =
@@ -24,7 +25,8 @@ public class QuizDbHelper extends SQLiteOpenHelper {
     private static final String SQL_CREATE_STATISTICHE_UTENTE =
     	"CREATE TABLE " + QuizStructure.TABLE_NAME_STATISTICHE_UTENTE + " (" +
         QuizStructure.COLUMN_NAME_STATISTICA_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
-        QuizStructure.COLUMN_NAME_PUNTEGGIO + TEXT_TYPE +
+        QuizStructure.COLUMN_NAME_PUNTEGGIO + TEXT_TYPE + COMMA_SEP +
+        QuizStructure.COLUMN_NAME_PUNTEGGIO_DATA + DATA_TYPE +
         " )";
 
     private static final String SQL_DELETE_TABLE_DOMANDE =
