@@ -135,7 +135,7 @@ public class QuizActivity extends Activity {
 					else{
 						Intent risultatoIntent = new Intent(QuizActivity.this, RisultatoActivity.class);
 						double risultatoFinaleTemp = (double) risultato/numDomande*100;
-						String risultatoFinale = String.valueOf((int) risultatoFinaleTemp) + "%";
+						String risultatoFinale = String.valueOf((int) risultatoFinaleTemp);
 						dbHelper.inserisciPunteggio(risultatoFinale);
 						
 						risultatoIntent.putExtra("risultatoQuiz", risultatoFinale);

@@ -16,7 +16,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true" 
         android:layout_above="@+id/button_pulisci_statistiche"
-        android:scrollbarThumbVertical="@color/Orange"/>
+        android:scrollbarThumbVertical="@color/Orange"
+        android:scrollbarSize="4dp"/>
         
     <Button
         android:id="@+id/button_pulisci_statistiche"

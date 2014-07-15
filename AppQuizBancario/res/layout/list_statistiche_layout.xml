@@ -8,7 +8,8 @@
         android:id="@+id/imagePunteggio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_launcher"/>
+        android:src="@drawable/ic_launcher"
+        android:contentDescription="@string/immaginePunteggio"/>
 
 	<TextView
 	    android:id="@+id/punteggioList"
@@ -16,7 +17,7 @@
 	    android:layout_height="wrap_content"
 	    android:layout_alignBaseline="@+id/dataPunteggioList"
 	    android:layout_alignBottom="@+id/dataPunteggioList"
-	    android:layout_marginLeft="15dp"
+	    android:layout_marginLeft="12dp"
 	    android:layout_toRightOf="@+id/imagePunteggio"
 	    android:textColor="#000000"
 	    android:textSize="25sp" />

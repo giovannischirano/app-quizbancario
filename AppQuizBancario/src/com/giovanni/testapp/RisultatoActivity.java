@@ -20,7 +20,7 @@ public class RisultatoActivity extends Activity {
 		String risultato = intent.getStringExtra("risultatoQuiz");
 
 		TextView risultatoText = (TextView) findViewById(R.id.risultato_quiz);
-		risultatoText.setText(getResources().getString(R.string.risultatoMessage) + "\n" + risultato);
+		risultatoText.setText(getResources().getString(R.string.risultatoMessage) + "\n" + risultato + "%");
 	}
 	
 	@Override

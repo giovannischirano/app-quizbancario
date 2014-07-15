@@ -15,5 +15,6 @@
     <string name="title_activity_statistiche">StatisticheActivity</string>
     <string name="bancarioQuestion">E tu che bancario sei?</string>
     <string name="pulisciDati">Pulisci Storia</string>
+    <string name="immaginePunteggio">esito punteggio</string>
 
 </resources>
