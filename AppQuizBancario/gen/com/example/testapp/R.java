@@ -42,6 +42,7 @@ public final class R {
         public static final int domanda=0x7f090006;
         public static final int imagePunteggio=0x7f09000f;
         public static final int listView=0x7f09000d;
+        public static final int menu_item_share=0x7f090013;
         public static final int punteggioList=0x7f090010;
         public static final int quiz_question=0x7f090005;
         public static final int radioGroup=0x7f090007;
