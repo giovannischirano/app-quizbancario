@@ -23,6 +23,7 @@ public class QuizStructure {
 	}
 
 	private static final int NUM_DOMANDE_RISPOSTE = 4;
+	private static final String NUM_DOMANDE = "5";
 	private Context context;
 	private SQLiteDatabase database;
 	private QuizDbHelper dbHelper;
@@ -86,12 +87,12 @@ public class QuizStructure {
 				initialValues);
 	}
 
-	// fetch di tutte le domande
-	public Cursor fetchAllDomande() {
+	// Random fetch delle domande da estrarre nel quiz
+	public Cursor fetchRandomDomande() {
 		return database.query(TABLE_NAME_DOMANDE, new String[] {
 				COLUMN_NAME_ENTRY_ID, COLUMN_NAME_DOMANDA,
 				COLUMN_NAME_RISPOSTA_1, COLUMN_NAME_RISPOSTA_2,
-				COLUMN_NAME_RISPOSTA_3 }, null, null, null, null, null);
+				COLUMN_NAME_RISPOSTA_3 }, null, null, null, null, "RANDOM()", NUM_DOMANDE);
 	}
 
 	// fetch di tutte i punteggi conseguiti dall'utente

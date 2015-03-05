@@ -76,7 +76,7 @@ public class QuizActivity extends Activity {
         
         dbHelper.buildDb(is);
               
-        cursor = dbHelper.fetchAllDomande();
+        cursor = dbHelper.fetchRandomDomande();
         numDomande = cursor.getCount();
         cursor.moveToFirst();
         

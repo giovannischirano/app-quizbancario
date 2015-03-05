@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">AppQuizBancario</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_risultato">RisultatoActivity</string>
+    <string name="title_activity_quiz">QuizActivity</string>
+    <string name="nessuna_risposta_title">No answer!</string>
+    <string name="nessuna_risposta_message">You are proceeding withou choosing any answer</string>
+    <string name="startQuiz">Start Quiz</string>
+    <string name="statisticheQuiz">Quiz Statistics</string>
+    <string name="risultatoMessage">Your banker level is:</string>
+    <string name="prossima_domanda">Next</string>
+    <string name="title_activity_statistiche">StatisticheActivity</string>
+    <string name="bancarioQuestion">Which Banker are you?</string>
+    <string name="pulisciDati">Clean History</string>
+    <string name="immaginePunteggio">esito punteggio</string>
+
+</resources>
